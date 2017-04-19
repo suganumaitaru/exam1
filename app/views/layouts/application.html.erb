@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam1</title>
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <ul>
+      <li><%= link_to "トップページ", root_path %></li>
+      <li><%= link_to "ぼやく", new_boyatter_path %></li>
+      <li><%= link_to "ぼやき", boyatters_path %></li>
+    </ul>
+  </header>
+  
+<%= yield %>
+
+  <footer>
+    <p>大課題１</p>
+    <p>© 2016-2017 Copyright BOYATTER INC.</p>
+  </footer>
+
+
+</body>
+</html>

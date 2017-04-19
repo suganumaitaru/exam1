@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<body>
+
+  <section class="main-header">
+  </section>
+  <section class="about">
+    <h1>Boyatter</h1>
+    <p>
+      TwitterのオマージュAPPのトップページです。
+    </p>
+  </section>
+
+  <section class="function container-fluid">
+   <div class="row">
+      
+    <p>画像をクリックして"ぼやく"か"ぼやき一覧"へ移動しよう！</p>
+    <div class="function-images">
+    <div class="col-md-6 col-sm-6">
+      <div class="function-image1">
+     <%= link_to image_tag('pencil.png',:alt => "画像",:width => "212",:height => "212",:align => 'right',class: "btn") , new_boyatter_path %>
+      </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+      <div class="function-image2">
+     <%= link_to image_tag('note.png',:alt => "画像",:width => "212",:height => "212",:align => 'left',class: "btn") ,boyatters_path %>
+      </div>
+    </div>
+   </div>
+  </section>
+
+</body>
+</html>

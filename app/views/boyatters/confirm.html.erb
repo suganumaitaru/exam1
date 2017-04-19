@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    
+    <h3>以下の内容で、ぼやく。</h3>
+<%= form_for(@boyatter) do |f| %>
+  <%= f.hidden_field :content %>
+  <p>本文:<%= @boyatter.content %></p>
+  <%= f.submit "ぼやきる",class: 'btn btn-primary btn-block'  %>
+<% end %>
+
+<%= form_for(@boyatter, url: new_boyatter_path, method: 'get') do |f| %>
+  <%= f.hidden_field :content %>
+  <%= f.submit "ちょっちまった！",name:'back', class: 'btn btn-default btn-block' %>
+<% end %>
+
+  </div>
+</div>
