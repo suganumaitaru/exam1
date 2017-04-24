@@ -12,7 +12,7 @@
     <div class="boyaki col-md-6" >
       <% @boyatters.each do |boyatter| %>
         <div class="row">
-          <p>本文:<%= boyatter.conten %></p>
+          <p>本文:<%= boyatter.content %></p>
           <%= link_to "編集する", edit_boyatter_path(boyatter.id), class: 'btn btn-default btn-sm btn-success' %>
           <%= link_to '削除する', boyatter_path(boyatter.id), method: :delete, data: { confirm: '本当に削除していいですか？' },class: 'btn btn-default btn-sm btn btn-danger' %>
         </div>
